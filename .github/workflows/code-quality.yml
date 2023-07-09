@@ -1,0 +1,38 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ develop, staging ]
+  pull_request:
+    branches: [ develop, staging ]
+
+permissions: read-all
+
+jobs:
+  CodingStandards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Get shared php setup
+        uses: ./.github/actions/php
+        with:
+          php-version: '8.2'
+
+      - name: Run php-cs-fixer
+        run: composer run-script phpcs
+
+      - name: Run phpstan
+        run: composer run-script phpstan
+
+      - name: Run Rector
+        run: ./vendor/bin/rector process ./src
+
+      - name: Upload coverage report to Codacy
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage.xml

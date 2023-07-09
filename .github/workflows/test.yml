@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+    branches: [ develop, staging ]
+  pull_request:
+    branches: [ develop, staging ]
+
+permissions: read-all
+
+jobs:
+  Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Get shared php setup
+        uses: ./.github/actions/php
+        with:
+          php-version: '8.2'
+
+      - name: Run tests with coverage
+        run: ./bin/phpunit --coverage-clover coverage.xml
+

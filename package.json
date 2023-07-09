@@ -1,0 +1,48 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.3",
+    "@semantic-release/release-notes-generator": "^11.0.4",
+    "@symfony/webpack-encore": "^4.3.0",
+    "conventional-changelog": "^4.0.0",
+    "conventional-changelog-angular": "^6.0.0",
+    "conventional-changelog-conventionalcommits": "^6.1.0",
+    "conventional-changelog-custom": "^0.0.1",
+    "core-js": "^3.31.1",
+    "regenerator-runtime": "^0.13.11",
+    "semantic-release": "^21.0.7",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-notifier": "^1.15.0"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress",
+    "lint": "./vendor/bin/phpcbf --standard=.phpcs.xml --ignore=vendor/,bin/,var/,node_modules/ src/ tests/",
+    "fix": "./vendor/bin/rector process ./src",
+    "analyze": "./vendor/bin/phpstan analyze --configuration=phpstan.neon --generate-baseline",
+    "security": "symfony check:security",
+    "precommit": "pnpm run lint && pnpm run analyze && pnpm run security"
+  },
+  "pre-commit": [
+    "precommit"
+  ],
+  "version": "0.0.1",
+  "name": "@tomcdj71/test-project",
+  "description": "This a a test",
+  "pnpm": {
+    "overrides": {
+      "extend@>=3.0.0 <3.0.2": ">=3.0.2",
+      "dot-prop@<4.2.1": ">=4.2.1",
+      "semver@<7.5.2": ">=7.5.2"
+    }
+  }
+}
