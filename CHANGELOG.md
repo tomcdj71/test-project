@@ -1,3 +1,5 @@
+# 1.0.0-beta.1 (2023-07-09)
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
