@@ -1,8 +1,8 @@
 # Welcome to test-project 👋
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 [![Twitter: tomcdj71](https://img.shields.io/twitter/follow/tomcdj71.svg?style=social)](https://twitter.com/tomcdj71)
-[![Codacy Badge](GRADE_URL)](https://app.codacy.com/gh/tomcdj71/test-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-[![Codacy Badge](COVERAGE_URL)](https://app.codacy.com/gh/tomcdj71/test-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9bda01e09aee420b9707998bfb0afb18)](https://app.codacy.com/gh/tomcdj71/test-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/9bda01e09aee420b9707998bfb0afb18)](https://app.codacy.com/gh/tomcdj71/test-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/tomcdj71/test-project)
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/tomcdj71/test-project?filter=*beta)
 
