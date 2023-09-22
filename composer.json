@@ -97,7 +97,7 @@
     }
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "v3.21.1",
+    "friendsofphp/php-cs-fixer": "v3.28.0",
     "phpmd/phpmd": "2.13.0",
     "phpro/grumphp": "v2.0.0",
     "phpstan/phpstan": "1.10.25",
